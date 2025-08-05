@@ -1,0 +1,280 @@
+.about-section-unique,
+.about-section-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 60px 8vw;
+  gap: 48px;
+  background: #fff;
+  flex-wrap: wrap;
+  margin: 32px 0; 
+  background: linear-gradient(-125deg, #ffffff 49%, #eafaf1 60%);
+}
+
+.about-left-unique, .about-left-progress {
+  flex: 1 1 340px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-left-unique h1, .about-left-progress h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.about-highlight-unique, .about-highlight-progress {
+  color: #1abc1a;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.about-intro-unique, .about-intro-progress {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.about-note-unique, .about-note-progress {
+  background: #f7f7f7;
+  color: #1abc1a;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.about-right-unique, .about-right-progress {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;      
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-grid-unique {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  width: 100%;
+  max-width: 340px;
+  perspective: 600px;
+}
+
+.stat-box-unique {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 16px 18px 16px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left-width: 8px;
+  border-left-style: solid;
+  min-width: 200px;   
+  min-height: 80px;
+  width: 200px;       
+  max-width: 100%;
+  /* transition: transform 0.25s cubic-bezier(0.77, 0, 0.175, 1), box-shadow 0.2s, background 0.2s; */
+  will-change: transform;
+}
+.stat-box-unique:hover{
+  box-shadow: black 3px 3px 3px;
+  /* transform: translateY(-2px) scale(1.05); */
+  cursor: pointer;
+  background: #f9f9f9; 
+}
+
+.stat-box-unique h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.stat-box-unique p {
+  font-size: 1.05rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.green-unique { border-left-color: #3ab803; }
+.blue-unique { border-left-color: #00d6b4; }
+.navy-unique { border-left-color: #003dd6; }
+.orange-unique { border-left-color: #e67e22; }
+
+/* Skills Progress Bars */
+.skills-bar-progress {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 0 auto;
+  align-items: stretch;        /* Make progress bars take full width */
+}
+
+.skill-progress {
+  width: 100%;
+}
+
+.skill-progress span {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 1.08rem;
+}
+
+.progress-progress {
+  background: #f0f0f0;
+  border-radius: 8px;
+  height: 28px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.progress-bar-progress {
+  height: 100%;
+  width: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 28px;
+  border-radius: 8px 0 0 8px;
+  padding-left: 12px;
+  transition: width 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  letter-spacing: 1px;
+}
+
+.progress-bar-progress.green-progress { background: #3ab803; }
+.progress-bar-progress.blue-progress { background: #00d6b4; }
+.progress-bar-progress.navy-progress { background: #003dd6; }
+.progress-bar-progress.orange-progress { background: #e67e22; }
+
+/* Responsive: stack only on small screens */
+@media (max-width: 900px) {
+  .about-section-unique,
+  .about-section-progress {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 4vw;
+    gap: 32px;
+    margin: 24px 0; /* Slightly less margin on medium screens */
+  }
+  .about-right-unique, .about-right-progress {
+    width: 100%;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .stat-grid-unique {
+    max-width: 100%;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section-unique,
+  .about-section-progress {
+    padding: 24px 2vw;
+    gap: 24px;
+    margin-top: 32px;
+    margin-bottom: 24px; /* Add bottom margin for spacing */
+  }
+  .about-left-unique h1, .about-left-progress h1 {
+    font-size: 2rem;
+  }
+  .about-intro-unique, .about-intro-progress {
+    font-size: 1rem;
+  }
+  .stat-grid-unique {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .stat-box-unique {
+    padding: 22px 10px 14px 10px;
+    width: 80vw;
+    min-width: 0;
+    max-width: 98vw;
+    margin-left: 3px;   /* Add small side margin */
+    margin-right: 3px;  /* Add small side margin */
+  }
+}
+
+
+@keyframes bookPageLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) rotateY(30deg) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg) scale(1);
+  }
+}
+
+
+@keyframes bookPageRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px) rotateY(-30deg) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    /* transform: none; */
+  }
+}
+
+
+.about-left-unique {
+  animation: bookPageLeft 1s cubic-bezier(0.77, 0, 0.175, 1) 0.1s both;
+}
+
+
+.about-right-unique {
+  animation: bookPageRight 1s cubic-bezier(0.77, 0, 0.175, 1) 0.3s both;
+}
+
+.stat-box-unique {
+  opacity: 0;
+  animation: bookPageRight 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.stat-box-unique:nth-child(1) { animation-delay: 0.5s; }
+.stat-box-unique:nth-child(2) { animation-delay: 0.65s; }
+.stat-box-unique:nth-child(3) { animation-delay: 0.8s; }
+.stat-box-unique:nth-child(4) { animation-delay: 0.95s; } 
+
+.about-projects-btn {
+  display: block;
+  margin: 28px auto 0 auto;   /* Space above, center horizontally */
+  width: fit-content;
+  padding: 1rem 2.5rem;
+  background: #1abc1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.about-projects-btn:hover {
+  background: #159c15;
+}
